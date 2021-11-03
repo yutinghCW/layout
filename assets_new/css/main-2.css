@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 article,
 aside,
 details,
@@ -5255,7 +5255,7 @@ ul.article__keyword li a::-moz-focus-inner {
 }
 @media (min-width: 1200px) {
   .article-page article {
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 .article-page article > h3.subtitle-block {

@@ -5255,7 +5255,7 @@ ul.article__keyword li a::-moz-focus-inner {
 }
 @media (min-width: 1200px) {
   .article-page article {
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 .article-page article > h3.subtitle-block {
