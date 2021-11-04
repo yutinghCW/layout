@@ -5287,7 +5287,7 @@ ul.article__keyword li a::-moz-focus-inner {
   .article-page article p,
   .article-page article ul,
   .article-page article ol {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 }
 .article-page article ul,
