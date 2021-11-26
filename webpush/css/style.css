@@ -63,11 +63,6 @@ a:hover {
 .picbox img {
   max-width: 8.25rem;
 }
-@media (max-width: 40rem) {
-  .picbox img {
-    max-width: 5rem;
-  }
-}
 
 .picbox-m {
   display: table-cell;
