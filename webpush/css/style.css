@@ -53,7 +53,7 @@ a:hover {
 }
 
 .wrapper {
-  padding: 1rem 1.5rem 1rem 1rem;
+  padding: 1rem 1.55rem 1rem 1rem;
 }
 
 .picbox {
@@ -103,7 +103,7 @@ a:hover {
 
 .title-m {
   color: #48545D;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   padding-bottom: 0.25rem;
 }
