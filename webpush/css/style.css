@@ -117,7 +117,6 @@ a:hover {
 }
 
 .btnbox {
-  position: relative;
   float: right;
 }
 
@@ -127,11 +126,74 @@ a:hover {
   border: 1px solid #003A9F;
   color: #003A9F;
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 .btn:hover {
   cursor: pointer;
   color: #D60C18;
   border: 1px solid #D60C18;
+}
+.btn::before, .btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: -1;
+}
+.btn::before {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.btn::after {
+  left: 50%;
+  top: 50%;
+  padding: 55%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: opacity 2s, -webkit-transform 0.5s;
+  transition: opacity 2s, -webkit-transform 0.5s;
+  transition: opacity 2s, transform 0.5s;
+  transition: opacity 2s, transform 0.5s, -webkit-transform 0.5s;
+}
+.btn:hover::before {
+  opacity: 0.04;
+}
+.btn:hover:focus::before {
+  opacity: 0.16;
+}
+.btn:focus::before {
+  opacity: 0.12;
+}
+.btn:active::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: -webkit-transform 0s;
+  transition: -webkit-transform 0s;
+  transition: transform 0s;
+  transition: transform 0s, -webkit-transform 0s;
+}
+.btn:disabled {
+  background-color: transparent;
+  cursor: initial;
+}
+.btn:disabled::before {
+  opacity: 0;
+}
+.btn:disabled::after {
+  opacity: 0;
+}
+.btn::after {
+  background-color: #FEEBEC;
 }
 
 .close-btn {
