@@ -43,12 +43,12 @@ a:hover {
 }
 
 .pad {
-  max-width: 25.875rem;
+  max-width: 27rem;
   background-color: #FAFAFA;
 }
 
 .mobile {
-  max-width: 25.875rem;
+  max-width: 100%;
   background-color: #FAFAFA;
 }
 
@@ -61,7 +61,7 @@ a:hover {
   vertical-align: middle;
 }
 .picbox img {
-  max-width: 8.25rem;
+  max-width: 10.688rem;
 }
 
 .picbox-m {
@@ -69,7 +69,7 @@ a:hover {
   vertical-align: middle;
 }
 .picbox-m img {
-  max-width: 5rem;
+  max-width: 9rem;
 }
 
 .content {
@@ -78,6 +78,7 @@ a:hover {
   padding: 1rem;
   max-width: 17.75rem;
   background-color: #FAFAFA;
+  clear: both;
 }
 
 .content-m {
@@ -99,6 +100,7 @@ a:hover {
 
 .title {
   color: #272727;
+  margin-bottom: 1rem;
 }
 
 .title-m {
@@ -111,6 +113,25 @@ a:hover {
 .intro {
   color: #6B7780;
   font-size: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+.btnbox {
+  position: relative;
+  float: right;
+}
+
+.btn {
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #003A9F;
+  color: #003A9F;
+  display: inline-block;
+}
+.btn:hover {
+  cursor: pointer;
+  color: #D60C18;
+  border: 1px solid #D60C18;
 }
 
 .close-btn {
