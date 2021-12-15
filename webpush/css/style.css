@@ -99,7 +99,8 @@ a:hover {
 }
 
 .title {
-  color: #272727;
+  color: #48545D;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
@@ -117,7 +118,30 @@ a:hover {
 }
 
 .btnbox {
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.btnbox a {
+  width: 50%;
+  text-align: center;
+  margin-right: 16px;
+}
+.btnbox a:last-child {
+  margin-right: 0;
+}
+.btnbox a.btn.blue {
+  color: #fff;
 }
 
 .btn {
@@ -194,6 +218,23 @@ a:hover {
 }
 .btn::after {
   background-color: #FEEBEC;
+}
+
+.btn.blue {
+  color: #fff;
+}
+.btn.blue:hover {
+  cursor: pointer;
+  color: #9D0505;
+  border: 1px solid #9D0505;
+  background-color: #9D0505;
+}
+.btn.blue::after {
+  background-color: #D60C18;
+}
+
+.blue {
+  background-color: #003A9F;
 }
 
 .close-btn {
