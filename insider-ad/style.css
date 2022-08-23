@@ -1,7 +1,11 @@
+@charset "UTF-8";
+
 .standby__wrapper {
   display: block;
   width: 760px;
   height: 400px;
+  letter-spacing: 1px;
+  line-height: 1.8;
   position: relative;
   overflow: hidden;
 }
