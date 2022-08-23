@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+.standby__wrapper {
+	display: block;
+	width: 760px;
+	height: 400px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		vertical-align: middle;
+	}
+
+	.standby__logo {
+		width: 80px;
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		z-index: 2;
+	}
+
+}
+
+.standby__cards {
+	display: table;
+	position: relative;
+	.card {
+		display: table-cell;
+		position: relative;
+		width: 380px;
+		height: 400px;
+		background: no-repeat center/100%;
+		img {
+			width: 100%;
+		}
+		.card__img {
+			position: absolute;
+		}
+		.card__text {
+			display: inline-block;
+			position: absolute;
+			color: #252525;
+			font-size: 26px;
+			visibility: hidden;
+			> i {
+				display: inline-block;
+				vertical-align: baseline;
+				width: 8px;
+				height: 8px;
+				margin-left: 0.25em;
+				border-radius: 100px;
+			}
+		}
+	}
+	.card--persist {
+		background-image: url("https://image.useinsider.com/commonwealthmagazine/defaultImageLibrary/background-left-1661216740.jpeg");
+		.card__img {
+			top: 38px;
+			left: -160px;
+			animation: visual__persist 0.4s ease 0.2s 1 normal forwards;
+		}
+		.card__text {
+			font-weight: 700;
+			top: 24px;
+			right: 34px;
+			animation: 1.8s standby__fadeIn;
+			animation-delay: 0.4s;
+			animation-fill-mode: forwards;
+			> i {
+				border: 2px solid #252525;
+			}
+		}
+	}
+	.card--crafted {
+		background-image: url("https://image.useinsider.com/commonwealthmagazine/defaultImageLibrary/background-right-1661216782.jpeg");
+		.card__img {
+			top: 72px;
+			right: 0px;
+			visibility: hidden;
+			animation: visual__crafted 0.4s ease 1.4s 1 normal forwards;
+		}
+		.card__text {
+			font-weight: 300;
+			top: 24px;
+			left: 34px;
+			animation: 1.8s standby__fadeIn;
+			animation-delay: 1.4s;
+			animation-fill-mode: forwards;
+			> i {
+				border: 1.5px solid #252525;
+			}
+		}
+	}
+}
+
+.standby__overlay {
+	width: 760px;
+	height: 400px;
+	position: absolute;
+	background-color: #D60C18;
+	z-index: 1;
+	visibility: hidden;
+	animation: 0.6s standby__fadeIn;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+	.overlay__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: 0;
+		padding: 8px 24px;
+		font-size: 24px;
+		font-weight: 400;
+		border: 1px solid #fff;
+		transform: translate(-50%, -50%);
+		&:not(.overlay__cta--after) {
+			color: #fff;
+			animation: standby__fadeOut 0.6s ease 3.6s 1 normal forwards;
+		}
+		&.overlay__cta--after {
+			color: #D60C18;
+			background-color: #fff;
+			visibility: hidden;
+			animation: 0.6s standby__fadeIn;
+			animation-delay: 3.6s;
+			animation-fill-mode: forwards;
+		}
+	}
+	.overlay__icon {
+		width: 32px;
+		height: 35px;
+		position: absolute;
+		left: 59%;
+		right: 36%;
+		top: 55;
+		bottom: 36%;    
+		animation: overlay__icon 0.6s ease 3s 1 normal forwards;
+	}
+}
+
+@keyframes visual__persist {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(160px);
+	}
+}
+
+@keyframes visual__crafted {
+	0% {
+		opacity: 0;
+		transform: translateX(160px);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes standby__fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes standby__fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes overlay__icon {
+	0% {
+		opacity: 0;
+		transform: translateY(320px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

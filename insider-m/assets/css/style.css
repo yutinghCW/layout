@@ -1,0 +1,288 @@
+.standby__wrapper {
+  display: block;
+  width: 320px;
+  height: 480px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
+}
+
+.standby__wrapper img {
+  vertical-align: middle;
+}
+
+.standby__wrapper span {
+  display: block;
+}
+
+.standby__wrapper .standby__logo {
+  width: 80px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+}
+
+.standby__cards .card {
+  position: relative;
+  width: 320px;
+  height: 240px;
+  background: no-repeat center/100%;
+}
+
+.standby__cards .card img {
+  width: 100%;
+}
+
+.standby__cards .card .card__img {
+  position: absolute;
+}
+
+.standby__cards .card .card__text {
+  display: inline-block;
+  position: absolute;
+  color: #252525;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+.standby__cards .card .card__text > i {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 8px;
+  height: 8px;
+  margin-left: 0.125em;
+  border-radius: 100px;
+}
+
+.standby__cards .card--persist {
+  background-image: url("https://image.useinsider.com/commonwealthmagazine/defaultImageLibrary/background-left-1661216740.jpeg");
+}
+
+.standby__cards .card--persist .card__img {
+  top: 18px;
+  left: -160px;
+  -webkit-animation: visual__persist 0.4s ease 0.2s 1 normal forwards;
+          animation: visual__persist 0.4s ease 0.2s 1 normal forwards;
+}
+
+.standby__cards .card--persist .card__text {
+  font-weight: 700;
+  top: 80px;
+  right: 16px;
+  -webkit-animation: 1.8s standby__fadeIn;
+          animation: 1.8s standby__fadeIn;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.standby__cards .card--persist .card__text > i {
+  border: 2px solid #252525;
+}
+
+.standby__cards .card--crafted {
+  background-image: url("https://image.useinsider.com/commonwealthmagazine/defaultImageLibrary/background-right-1661216782.jpeg");
+}
+
+.standby__cards .card--crafted .card__img {
+  top: 20px;
+  right: 0px;
+  visibility: hidden;
+  -webkit-animation: visual__crafted 0.4s ease 1.4s 1 normal forwards;
+          animation: visual__crafted 0.4s ease 1.4s 1 normal forwards;
+}
+
+.standby__cards .card--crafted .card__text {
+  font-weight: 300;
+  top: 96px;
+  left: 16px;
+  -webkit-animation: 1.8s standby__fadeIn;
+          animation: 1.8s standby__fadeIn;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.standby__cards .card--crafted .card__text > i {
+  border: 1.5px solid #252525;
+}
+
+.standby__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #D60C18;
+  z-index: 1;
+  visibility: hidden;
+  -webkit-animation: 0.6s standby__fadeIn;
+          animation: 0.6s standby__fadeIn;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.standby__overlay .overlay__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 8px 24px;
+  font-size: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+  border: 1px solid #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.standby__overlay .overlay__cta:not(.overlay__cta--after) {
+  color: #fff;
+  -webkit-animation: standby__fadeOut 0.6s ease 3.6s 1 normal forwards;
+          animation: standby__fadeOut 0.6s ease 3.6s 1 normal forwards;
+}
+
+.standby__overlay .overlay__cta.overlay__cta--after {
+  color: #D60C18;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-animation: 0.6s standby__fadeIn;
+          animation: 0.6s standby__fadeIn;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.standby__overlay .overlay__icon {
+  width: 24px;
+  height: 28px;
+  position: absolute;
+  left: 59%;
+  right: 36%;
+  top: 54%;
+  bottom: 35%;
+  -webkit-animation: overlay__icon 0.6s ease 3s 1 normal forwards;
+          animation: overlay__icon 0.6s ease 3s 1 normal forwards;
+}
+
+@-webkit-keyframes visual__persist {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(160px);
+            transform: translateX(160px);
+  }
+}
+
+@keyframes visual__persist {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(160px);
+            transform: translateX(160px);
+  }
+}
+
+@-webkit-keyframes visual__crafted {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(160px);
+            transform: translateX(160px);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes visual__crafted {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(160px);
+            transform: translateX(160px);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes standby__fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes standby__fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes standby__fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes standby__fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes overlay__icon {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(320px);
+            transform: translateY(320px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes overlay__icon {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(320px);
+            transform: translateY(320px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
